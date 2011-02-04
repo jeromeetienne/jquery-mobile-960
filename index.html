@@ -21,7 +21,7 @@ pre {
 	padding-bottom	: 2em;
 	background-color: #CCC;
 	font-weight	: bold;
-	border-radius	: 15px;
+	border-radius	: 30px;
 	border-color	: #888;
 	border-style	: solid;
 	border-width	: 2px;
@@ -35,7 +35,8 @@ h1.pageTitle {
 local skin
 */
 
-body {
+h1.pageTitle {
+	margin-top: 20px;
 }
 pre {
 	font-size	: 0.85em;	
@@ -55,28 +56,37 @@ pre span.bold {
 			It brings <b>more flexibility to jquery-mobile layout</b> and thus
 			make it <b>more suitable for tablets</b>.
 		</p>
+		<h2>How to use it ?</h1>
+		To use 960 grids in jQuery Mobile, simply add one line:
+		<pre>    &lt;link href="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.css" /&gt;
+    <span class="bold">&lt;link href="http://jeromeetienne.github.com/jquery-mobile-960/css/jquery-mobile-960.min.css" /&gt;</span>
+    &lt;script src="http://code.jquery.com/jquery-1.5.min.js"&gt;&lt;/script&gt;
+    &lt;script src="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.js">&lt;/script&gt;</pre>
+		And now you can use normal 960 grid syntax inside jQuery mobile
+		<pre>
+			here you put a example of 960 in a jquery mobile html
+		</pre>
+		<a href="http://960.gs" data-role="button">960 homepage</a>
+		<h2>Motivation</h2>
 		<p>
-			jqQuery mobile grid is currently rather crude ... uselessly
+			I loved jQuery-mobile ability to make an application by just describing its structure in HTML5.
+			It makes applications real fast to develop. It seems to work real fine on mobile, but on larger
+			screens, not as good. jQuery-mobile layout is raw.
+		</p>
+		<p>
+			jQuery mobile grid is currently rather crude ... uselessly
 			difficult to use on large screens, like tablets.
 			They only split the width in even parts, providing little controls to the designer.
 			It uses an custom API with names ending with a, b, c or d, ui-block-a for example.
 			Not the classic grid-4 or span-3.
-			<a href="http://jquerymobile.com/demos/1.0a3/#docs/content/content-grids.html">See more</a>
 		</p>
 		<p>
-			jquery-mobile-960 aims to fix those 2 issues by brinding <b>more flexibility</b> and <b>known API</b>.
+			All in all, i wasnt satisfied.
+			jQuery-mobile-960 aims to fix those 2 issues by brinding <b>more flexibility</b> and
+			a <b>known API</b>.
+			It aims to make jquery mobile easier to use on larger screens.
 		</p>
-		<h2>How to use it ?</h1>
-		To get jquery mobile, usually you do something like this:
-		<pre>    &lt;link href="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.css" /&gt;
-    &lt;script src="http://code.jquery.com/jquery-1.5.min.js">&lt;/script&gt;
-    &lt;script src="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.js"&gt;&lt;/script&gt;</pre>
-		To use 960 grids, simply add one line:
-		<pre>    &lt;link href="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.css" /&gt;
-    <span class="bold">&lt;link href="http://jeromeetienne.gihub.com/jquery-mobile-960/css/jquery-mobile-960.min.css" /&gt;</span>
-    &lt;script src="http://code.jquery.com/jquery-1.5.min.js"&gt;&lt;/script&gt;
-    &lt;script src="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.js">&lt;/script&gt;</pre>
-		
+		<a href="http://jquerymobile.com/demos/1.0a3/#docs/content/content-grids.html" data-role="button">jQuery Mobile Grid Docs</a>
 	
 		<h2>960 grid is cool</h2>
 		<ul data-role="listview"  data-inset="true" data-theme="c" data-dividertheme="b">
@@ -99,8 +109,11 @@ pre span.bold {
 
 
 		<h1>Demo</h1>
-		<a href="http://localhost/~jerome/jquery-mobile-960/demoFluid.html" target="_blank" data-role="button">See Demo for fluid 960</a>
-		<a href="http://localhost/~jerome/jquery-mobile-960/demoFixed.html" target="_blank" data-role="button">See Demo for fixed 960</a>
+		See the demo pages. Seeing is more convincing than believing.
+		<div data-role="controlgroup">
+			<a href="http://localhost/~jerome/jquery-mobile-960/demoFixed.html" target="_blank" data-role="button">Demo for fixed 960</a>
+			<a href="http://localhost/~jerome/jquery-mobile-960/demoFluid.html" target="_blank" data-role="button">Demo for fluid 960</a>
+		</div>
 	</div><!-- /content -->
 </div><!-- /page -->
 
