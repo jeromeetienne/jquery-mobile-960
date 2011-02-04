@@ -1,7 +1,4 @@
-This is a port of 960.gs grid to jquery mobile.
-
-It aims to make jquery mobile more flexible on tablets.
-
+jquery-mobile-960 is a port of 960 grid to jquery mobile, to more flexible on tablets.
 
 ### Resources
 
