@@ -3,30 +3,54 @@
 	<head> 
 	<title>jquery mobile + 960 grid</title> 
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.css" />
-	<link rel="stylesheet" href="css/jquery-mobile-fluid960.css" />
+	<link rel="stylesheet" href="css/jquery-mobile-960.css" />
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
 	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.js"></script>
 </head> 
 <body>
 <style>
+/*
+Global skin
+*/
 body {
-	background-color: #666;
+	background-color	: #666;
 }
-div[data-role=page] {
-	left		: 50%;
-	margin-left	: -480px;
-	width		: 960px;
+pre {
+	padding-top	: 2em;
+	padding-bottom	: 2em;
+	background-color: #CCC;
+	font-weight	: bold;
+	border-radius	: 15px;
+	border-color	: #888;
+	border-style	: solid;
+	border-width	: 2px;
+}
+h1.pageTitle {
+	text-align	: center;
+	font-size	: 300%;
+}
+
+/*
+local skin
+*/
+
+pre {
+	font-size	: 130%;	
+}
+pre span.bold {
+	color		: #254F7A;
+	text-shadow	: #5E87B0 0px 1px 0px;	
 }
 </style>
 <div data-role="page"  data-backbtn="false">
-	<div data-role="header"  data-backbtn="false">
-		<h1>jquery mobile + 960 grid: demo</h1>
-	</div><!-- /header -->
-
 	<div data-role="content">
-		<h1>960 grid on jquery mobile</h1>
+		<h1 class="pageTitle">960 grid on jQuery mobile</h1>
 
-		jquery-mobile-960 is a <b>port of 960 grid to jquery mobile, to make it more flexible on tablets</b>.
+		jquery-mobile-960 is a <b>port of 960 grid to jquery mobile</b>.
+
+		
+		It brings <b>more flexibility to jquery-mobile layout</b> and thus
+		make it <b>more suitable for tablets</b>.
 		
 		It has the flexibility of 960.gs, and is as easy to use as jquery mobile.
 		
@@ -36,9 +60,15 @@ div[data-role=page] {
 		Current jquery mobile grid currently are crude at best, not suitable for large screen like tablets.
 
 		<h2>How to use it ?</h1>
-		<pre>
-			<link rel="stylesheet" href="css/jquery-mobile-fluid960.css" />
-		</pre>
+		To get jquery mobile, usually you do something like this:
+		<pre>    &lt;link href="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.css" /&gt;
+    &lt;script src="http://code.jquery.com/jquery-1.5.min.js">&lt;/script&gt;
+    &lt;script src="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.js"&gt;&lt;/script&gt;</pre>
+		To use 960 grids, simply add one line:
+		<pre>    &lt;link href="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.css" /&gt;
+    <span class="bold">&lt;link href="css/jquery-mobile-fluid960.css" /&gt;</span>
+    &lt;script src="http://code.jquery.com/jquery-1.5.min.js"&gt;&lt;/script&gt;
+    &lt;script src="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.js">&lt;/script&gt;</pre>
 		
 	
 		<h2>960 grid is cool</h2>
@@ -62,13 +92,9 @@ div[data-role=page] {
 
 
 		<h1>Demo</h1>
-		<a href="http://localhost/~jerome/jquery-mobile-960/demoFluid.html" data-role="button">See Demo for fluid 960</a>
-		<a href="http://localhost/~jerome/jquery-mobile-960/demoFixed.html" data-role="button">See Demo for fixed 960</a>
+		<a href="http://localhost/~jerome/jquery-mobile-960/demoFluid.html" target="_blank" data-role="button">See Demo for fluid 960</a>
+		<a href="http://localhost/~jerome/jquery-mobile-960/demoFixed.html" target="_blank" data-role="button">See Demo for fixed 960</a>
 	</div><!-- /content -->
-
-	<div data-role="footer">
-		<h4>Page Footer</h4>
-	</div><!-- /footer -->
 </div><!-- /page -->
 
 </body>
