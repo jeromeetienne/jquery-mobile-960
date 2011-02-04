@@ -2,156 +2,62 @@
 <html> 
 	<head> 
 	<title>jquery mobile + 960 grid</title> 
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a2/jquery.mobile-1.0a2.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.css" />
 	<link rel="stylesheet" href="css/jquery-mobile-fluid960.css" />
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
-	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0a2/jquery.mobile-1.0a2.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.js"></script>
 </head> 
-<body> 
+<body>
+<style>
+.container_12 ul[data-role='listview'] {
+	margin:	0px;
+	margin-left:	5px;
+	margin-right:	5px;
+}
+.container_16 ul[data-role='listview'] {
+	margin:	0px;
+	margin-left:	5px;
+	margin-right:	5px;
+}
+</style>
 
-<div data-role="page">
+<div data-role="page"  data-backbtn="false">
 
-	<div data-role="header">
+	<div data-role="header"  data-backbtn="false">
 		<h1>jquery mobile + 960 grid: demo</h1>
 	</div><!-- /header -->
 
 	<div data-role="content">
-		<h1>12 columns</h1>
-		<div class="container_12">
-			<div class="grid_12"><a data-role="button">12</a></div>
+		<h1>960 grid on jquery mobile</h1>
+		
+		well known grid,
+		associate 2 distincts works, 960.gs and jquery mobile
+		
+		Current jquery mobile grid currently are crude at best, not suitable for large screen like tablets.
+		
+	
+		<h2>960 grid is cool</h2>
+		<ul data-role="listview"  data-inset="true" data-theme="c" data-dividertheme="b">
+			<li><a href="http://creativefan.com/tutorials-and-inspiration-to-unleash-the-960-grid-system/">Because many developers already know it</a></li>
+			<li><a href="http://www.blueprintcss.org/">Other alternatives like blueprint exist</a></li>
+			<li><a href="http://960.gs">See More.</a></li>
+		</ul>
+		<h2>jQuery mobile grid are crude</h2>
+		<ul data-role="listview"  data-inset="true" data-theme="c" data-dividertheme="b">
+			<li data-role="list-divider">Layout Not Flexible</li> 
+			<li>they only split the width in even parts. The user lack controls</li>
+			<li data-role="list-divider">Unsuitable for Tablets</li> 
+			<li>make its hard to use for tablette or any large screens devices</li>
+			<li data-role="list-divider">Unsual API</li> 
+			<li>Custom classes with usual names with a,b,c e.g. ui-block-a</li>
+			<li>not the classic grid-4 or span-4 like other frameworks</li>
+			<li data-role="list-divider">Details</li> 
+			<li><a href="http://jquerymobile.com/demos/1.0a3/#docs/content/content-grids.html">Official documentation.</a></li>
+		</ul>
 
-			<div class="grid_1"><a data-role="button">1</a></div>
-			<div class="grid_11"><a data-role="button">11</a></div>
 
-			<div class="grid_2"><a data-role="button">2</a></div>
-			<div class="grid_10"><a data-role="button">10</a></div>
-
-			<div class="grid_3"><a data-role="button">3</a></div>
-			<div class="grid_9"><a data-role="button">9</a></div>
-
-			<div class="grid_4"><a data-role="button">4</a></div>
-			<div class="grid_8"><a data-role="button">8</a></div>
-
-			<div class="grid_5"><a data-role="button">5</a></div>
-			<div class="grid_7"><a data-role="button">7</a></div>
-
-			<div class="grid_6"><a data-role="button">6</a></div>
-			<div class="grid_6"><a data-role="button">6</a></div>
-
-			<div class="grid_7"><a data-role="button">7</a></div>
-			<div class="grid_5"><a data-role="button">5</a></div>
-
-			<div class="grid_8"><a data-role="button">8</a></div>
-			<div class="grid_4"><a data-role="button">4</a></div>
-
-			<div class="grid_9"><a data-role="button">9</a></div>
-			<div class="grid_3"><a data-role="button">3</a></div>
-
-			<div class="grid_10"><a data-role="button">10</a></div>
-			<div class="grid_2"><a data-role="button">2</a></div>
-
-			<div class="grid_11"><a data-role="button">11</a></div>
-			<div class="grid_1"><a data-role="button">1</a></div>
-
-			<div class="grid_1 suffix_11"><a data-role="button">1</a></div>
-			<div class="grid_1 prefix_1 suffix_10"><a data-role="button">1</a></div>
-			<div class="grid_1 prefix_2 suffix_9"><a data-role="button">1</a></div>
-			<div class="grid_1 prefix_3 suffix_8"><a data-role="button">1</a></div>
-			<div class="grid_1 prefix_4 suffix_7"><a data-role="button">1</a></div>
-			<div class="grid_1 prefix_5 suffix_6"><a data-role="button">1</a></div>
-			<div class="grid_1 prefix_6 suffix_5"><a data-role="button">1</a></div>
-			<div class="grid_1 prefix_7 suffix_4"><a data-role="button">1</a></div>
-			<div class="grid_1 prefix_8 suffix_3"><a data-role="button">1</a></div>
-			<div class="grid_1 prefix_9 suffix_2"><a data-role="button">1</a></div>
-			<div class="grid_1 prefix_10 suffix_1"><a data-role="button">1</a></div>
-			<div class="grid_1 prefix_11"><a data-role="button">1</a></div>
-
-			<div class="grid_3"><a data-role="button">3</a></div>
-			<div class="grid_3"><a data-role="button">3</a></div>
-			<div class="grid_1"><a data-role="button">1</a></div>
-			<div class="grid_5"><a data-role="button">5</a></div>
-
-			<div class="grid_1"><a data-role="button">1</a></div>
-			<div class="grid_5"><a data-role="button">5</a></div>
-			<div class="grid_3"><a data-role="button">3</a></div>
-			<div class="grid_3"><a data-role="button">3</a></div>
-		</div>
-		<h1>16 columns</h1>
-		<div class="container_16">
-			<div class="grid_16"><a data-role="button">16</a></div>
-
-			<div class="grid_1"><a data-role="button">1</a></div>
-			<div class="grid_15"><a data-role="button">15</a></div>
-
-			<div class="grid_2"><a data-role="button">2</a></div>
-			<div class="grid_14"><a data-role="button">14</a></div>
-
-			<div class="grid_3"><a data-role="button">3</a></div>
-			<div class="grid_13"><a data-role="button">13</a></div>
-
-			<div class="grid_4"><a data-role="button">4</a></div>
-			<div class="grid_12"><a data-role="button">12</a></div>
-
-			<div class="grid_5"><a data-role="button">5</a></div>
-			<div class="grid_11"><a data-role="button">11</a></div>
-
-			<div class="grid_6"><a data-role="button">6</a></div>
-			<div class="grid_10"><a data-role="button">10</a></div>
-
-			<div class="grid_7"><a data-role="button">7</a></div>
-			<div class="grid_9"><a data-role="button">9</a></div>
-
-			<div class="grid_8"><a data-role="button">8</a></div>
-			<div class="grid_8"><a data-role="button">8</a></div>
-
-			<div class="grid_9"><a data-role="button">9</a></div>
-			<div class="grid_7"><a data-role="button">7</a></div>
-
-			<div class="grid_10"><a data-role="button">10</a></div>
-			<div class="grid_6"><a data-role="button">6</a></div>
-
-			<div class="grid_11"><a data-role="button">11</a></div>
-			<div class="grid_5"><a data-role="button">5</a></div>
-
-			<div class="grid_12"><a data-role="button">12</a></div>
-			<div class="grid_4"><a data-role="button">4</a></div>
-
-			<div class="grid_13"><a data-role="button">13</a></div>
-			<div class="grid_3"><a data-role="button">3</a></div>
-
-			<div class="grid_14"><a data-role="button">14</a></div>
-			<div class="grid_2"><a data-role="button">2</a></div>
-
-			<div class="grid_15"><a data-role="button">15</a></div>
-			<div class="grid_1"><a data-role="button">1</a></div>
-
-			<div class="grid_1 suffix_15"><a data-role="button">1</a></div>
-			<div class="grid_1 prefix_1 suffix_14"><a data-role="button">1</a></div>
-			<div class="grid_1 prefix_2 suffix_13"><a data-role="button">1</a></div>
-			<div class="grid_1 prefix_3 suffix_12"><a data-role="button">1</a></div>
-			<div class="grid_1 prefix_4 suffix_11"><a data-role="button">1</a></div>
-			<div class="grid_1 prefix_5 suffix_10"><a data-role="button">1</a></div>
-			<div class="grid_1 prefix_6 suffix_9"><a data-role="button">1</a></div>
-			<div class="grid_1 prefix_7 suffix_8"><a data-role="button">1</a></div>
-			<div class="grid_1 prefix_8 suffix_7"><a data-role="button">1</a></div>
-			<div class="grid_1 prefix_9 suffix_6"><a data-role="button">1</a></div>
-			<div class="grid_1 prefix_10 suffix_5"><a data-role="button">1</a></div>
-			<div class="grid_1 prefix_11 suffix_4"><a data-role="button">1</a></div>
-			<div class="grid_1 prefix_12 suffix_3"><a data-role="button">1</a></div>
-			<div class="grid_1 prefix_13 suffix_2"><a data-role="button">1</a></div>
-			<div class="grid_1 prefix_14 suffix_1"><a data-role="button">1</a></div>
-			<div class="grid_1 prefix_15"><a data-role="button">1</a></div>
-
-			<div class="grid_4"><a data-role="button">4</a></div>
-			<div class="grid_4"><a data-role="button">4</a></div>
-			<div class="grid_1"><a data-role="button">1</a></div>
-			<div class="grid_7"><a data-role="button">7</a></div>
-
-			<div class="grid_1"><a data-role="button">1</a></div>
-			<div class="grid_7"><a data-role="button">7</a></div>
-			<div class="grid_4"><a data-role="button">4</a></div>
-			<div class="grid_4"><a data-role="button">4</a></div>
-		</div>
+		<h1>Demo</h1>
+		<a href="demo.html" data-role="button">See Demo page</a>
 	</div><!-- /content -->
 
 	<div data-role="footer">

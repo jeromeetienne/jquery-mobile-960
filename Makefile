@@ -22,9 +22,9 @@ minify:
 deploy	: minify deployGhPage
 
 deployGhPage:
-	rm -rf /tmp/jquery-mobile-960GhPage
-	(cd /tmp && git clone git@github.com:jeromeetienne/jquery-mobile-960.git jquery-mobile-960GhPage)
-	(cd /tmp/jquery-mobile-960GhPage && git checkout gh-pages)
-	cp -a *.html *.js CNAME ./web ./example ./contrib /tmp/jquery-mobile-960
-	(cd /tmp/jquery-mobile-960GhPage && git add . && git commit -a -m "Another deployement" && git push origin gh-pages)
-	#rm -rf /tmp/jquery-mobile-960GhPage
+	rm -rf /tmp/jquery-mobile-960GhPages
+	(cd /tmp && git clone git@github.com:jeromeetienne/jquery-mobile-960.git jquery-mobile-960GhPages)
+	(cd /tmp/jquery-mobile-960GhPages && git checkout gh-pages)
+	cp -a * /tmp/jquery-mobile-960GhPages
+	(cd /tmp/jquery-mobile-960GhPages && git add . && git commit -a -m "Another deployement" && git push origin gh-pages)
+	#rm -rf /tmp/jquery-mobile-960GhPages
