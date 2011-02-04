@@ -25,6 +25,6 @@ deployGhPage:
 	rm -rf /tmp/jquery-mobile-960GhPages
 	(cd /tmp && git clone git@github.com:jeromeetienne/jquery-mobile-960.git jquery-mobile-960GhPages)
 	(cd /tmp/jquery-mobile-960GhPages && git checkout gh-pages)
-	cp -a * /tmp/jquery-mobile-960GhPages
+	cp -a * .nojekyll /tmp/jquery-mobile-960GhPages
 	(cd /tmp/jquery-mobile-960GhPages && git add . && git commit -a -m "Another deployement" && git push origin gh-pages)
 	#rm -rf /tmp/jquery-mobile-960GhPages

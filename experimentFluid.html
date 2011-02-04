@@ -1,0 +1,134 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>jquery mobile + 960 grid</title> 
+	<link rel="stylesheet" href="js/jquery-mobile/jquery.mobile-1.0a3.css" />
+	<script type="text/javascript" src="js/jquery/jquery-1.5.js"></script>
+	<script type="text/javascript" src="js/jquery-mobile/jquery.mobile-1.0a3.js"></script>
+</head>
+<body> 
+<style>
+
+<!--
+* official 960 https://github.com/nathansmith/960-Grid-System/blob/master/code/css/uncompressed/960.css
+* fluid 960 http://www.designinfluences.com/fluid960gs/css/grid.css
+* jquery mobile grid https://github.com/jquery/jquery-mobile/blob/master/themes/default/jquery.mobile.grids.css
+* blueprint http://www.blueprintcss.org/blueprint/src/grid.css
+
+### TODO
+* to match official API: need prefix/suffix/container_16
+  * yep be compatible
+  * static 960 with 12 columns, and with 16 columns
+  * fluid 960 with 12 and 16 columns
+* how to publish it ?
+  * 
+-->
+
+.container_12 {
+	overflow: hidden;
+}
+
+.container_12 .grid_1	{ width: 8.33%;	}
+.container_12 .grid_2	{ width: 16.66%;}
+.container_12 .grid_3	{ width: 25%;	}
+.container_12 .grid_4	{ width: 33%;	}
+.container_12 .grid_5	{ width: 41.6%;	}
+.container_12 .grid_6	{ width: 50%;	}
+.container_12 .grid_7	{ width: 58.3%;	}
+.container_12 .grid_8	{ width: 66.6%;	}
+.container_12 .grid_9	{ width: 75%;	}
+.container_12 .grid_10	{ width: 83.3%;	}
+.container_12 .grid_11	{ width: 91.6%;	}
+.container_12 .grid_12	{ width: 100%;	}
+.container_12 .alpha {
+	clear: left;
+}
+
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5,
+.grid_6,
+.grid_7,
+.grid_8,
+.grid_9,
+.grid_10,
+.grid_11,
+.grid_12
+{ margin: 0; padding: 0; border: 0; float: left; }
+
+</style>
+
+<div data-role="page">
+	<div data-role="header">
+		<h1>jquery mobile + 960 grid</h1>
+	</div><!-- /header -->
+
+	<div data-role="content">
+		<h1 class="pagetitle">grid-960-12 3time grid_4</h1>
+		<hr/>
+		<div class="container_12">
+			<div class="grid_2 alpha"><a href="javascript:void()" data-role="button">button A</a></div>
+			<div class="grid_7"><a href="javascript:void()" data-role="button">button C</a></div>
+			<div class="grid_3 omega">
+		<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b"> 
+			<li data-role="list-divider">Overview</li> 
+			<li><a href="docs/about/intro.html">Intro to jQuery Mobile</a></li> 
+			<li><a href="docs/about/features.html">Features</a></li> 
+			<li data-role="list-divider">Overview</li> 
+			<li><a href="docs/about/accessibility.html">Accessibility</a></li> 
+			<li><a href="docs/about/platforms.html">Supported platforms</a></li> 
+		</ul>				
+			</div>
+		</div>
+		<h1>grid-960-12 3time grid_4</h1>
+		<div class="container_12">
+			<div class="grid_1 alpha"><a href="javascript:void()" data-role="button">button A</a></div>
+			<div class="grid_3"><a href="javascript:void()" data-role="button">button B</a></div>
+			<div class="grid_8 omega"><a href="javascript:void()" data-role="button">button C</a></div>
+		</div>
+		<h1>grid-960-12 4time grid_3</h1>
+		<div class="container_12">
+			<div class="grid_3 alpha">Block A</div>
+			<div class="grid_3">Block B</div>
+			<div class="grid_3">Block C</div>
+			<div class="grid_3 omega">Block D</div>
+			<div class="grid_3 alpha">Block A</div>
+			<div class="grid_6">Block B</div>
+			<div class="grid_3 omega">Block D</div>
+			<div class="grid_6 alpha">Block A</div>
+			<div class="grid_3">Block B</div>
+			<div class="grid_3 omega">Block D</div>
+			<div class="grid_11 alpha">Block A</div>
+			<div class="grid_1 omega">Block D</div>
+		</div>
+		<h1>grid-960-12 3time grid_4</h1>
+		<div class="container_12">
+			<div class="grid_4 alpha">Block A</div>
+			<div class="grid_4">Block B</div>
+			<div class="grid_4 omega">Block C</div>
+		</div>
+		
+		<h1>grid-a</h1>
+		<div class="ui-grid-a">
+			<div class="ui-block-a"><strong>I'm Block A</strong> and text inside will wrap</div>
+			<div class="ui-block-b"><strong>I'm Block B</strong> and text inside will wrap</div>
+		</div>
+
+		<h1>grid-b</h1>
+		<div class="ui-grid-b">
+			<div class="ui-block-a">Block A</div>
+			<div class="ui-block-b">Block B</div>
+			<div class="ui-block-c">Block C</div>
+		</div>
+
+	</div><!-- /content -->
+
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+</body>
+</html>
