@@ -18,6 +18,7 @@ build:
 
 minify:
 	yuicompressor --type css css/jquery-mobile-fluid960.css > css/jquery-mobile-fluid960.min.css
+	yuicompressor --type css css/jquery-mobile-960.css > css/jquery-mobile-960.min.css
 
 deploy	: minify deployGhPage
 
