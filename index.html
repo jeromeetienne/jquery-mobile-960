@@ -13,8 +13,8 @@
 Global skin
 */
 body {
-	background-color	: #666;
-	font-size: 1.5em;
+	background-color: #666;
+	font-size	: 1.4em;
 }
 pre {
 	padding-top	: 2em;
@@ -36,7 +36,6 @@ local skin
 */
 
 body {
-	font-size: 1.5em;
 }
 pre {
 	font-size	: 0.85em;	
@@ -48,20 +47,24 @@ pre span.bold {
 <div data-role="page"  data-backbtn="false">
 	<div data-role="content">
 		<h1 class="pageTitle">960 grid on jQuery mobile</h1>
-
 		<p>
-		jquery-mobile-960 is a <b>port of 960 grid to jquery mobile</b>.
-
-		
-		It brings <b>more flexibility to jquery-mobile layout</b> and thus
-		make it <b>more suitable for tablets</b>.
-		
-		It has the flexibility of 960.gs, and is as easy to use as jquery mobile.
-		
-		well known grid,
-		associate 2 distincts works, 960.gs and jquery mobile
-		
-		Current jquery mobile grid currently are crude at best, not suitable for large screen like tablets.
+			jquery-mobile-960 is a <b>port of 960 grid to jquery mobile</b>.
+			
+			It has the flexibility of 960.gs, and is as easy to use as jquery mobile.
+	
+			It brings <b>more flexibility to jquery-mobile layout</b> and thus
+			make it <b>more suitable for tablets</b>.
+		</p>
+		<p>
+			jqQuery mobile grid is currently rather crude ... uselessly
+			difficult to use on large screens, like tablets.
+			They only split the width in even parts, providing little controls to the designer.
+			It uses an custom API with names ending with a, b, c or d, ui-block-a for example.
+			Not the classic grid-4 or span-3.
+			<a href="http://jquerymobile.com/demos/1.0a3/#docs/content/content-grids.html">See more</a>
+		</p>
+		<p>
+			jquery-mobile-960 aims to fix those 2 issues by brinding <b>more flexibility</b> and <b>known API</b>.
 		</p>
 		<h2>How to use it ?</h1>
 		To get jquery mobile, usually you do something like this:
@@ -70,7 +73,7 @@ pre span.bold {
     &lt;script src="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.js"&gt;&lt;/script&gt;</pre>
 		To use 960 grids, simply add one line:
 		<pre>    &lt;link href="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.css" /&gt;
-    <span class="bold">&lt;link href="css/jquery-mobile-fluid960.css" /&gt;</span>
+    <span class="bold">&lt;link href="http://jeromeetienne.gihub.com/jquery-mobile-960/css/jquery-mobile-960.min.css" /&gt;</span>
     &lt;script src="http://code.jquery.com/jquery-1.5.min.js"&gt;&lt;/script&gt;
     &lt;script src="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.js">&lt;/script&gt;</pre>
 		
