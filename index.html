@@ -1,80 +1,69 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
-	<title>jeromeetienne/jquery-mobile-960 @ GitHub</title>
-	
-	<style type="text/css">
-		body {
-  		margin-top: 1.0em;
-  		background-color: #fa6dc9;
-		  font-family: "Helvetica,Arial,FreeSans";
-  		color: #000000;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-		h1 { font-size: 3.8em; color: #059236; margin-bottom: 3px; }
-		h1 .small { font-size: 0.4em; }
-		h1 a { text-decoration: none }
-		h2 { font-size: 1.5em; color: #059236; }
-    h3 { text-align: center; color: #059236; }
-    a { color: #059236; }
-    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
-    .download { float: right; }
-		pre { background: #000; color: #fff; padding: 15px;}
-    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
-    .footer { text-align:center; padding-top:30px; font-style: italic; }
-	</style>
-	
-</head>
-
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>jquery mobile + 960 grid</title> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.css" />
+	<link rel="stylesheet" href="css/jquery-mobile-fluid960.css" />
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.4.3.min.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.js"></script>
+</head> 
 <body>
-  <a href="http://github.com/jeromeetienne/jquery-mobile-960"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+<style>
+.container_12 ul[data-role='listview'] {
+	margin:	0px;
+	margin-left:	5px;
+	margin-right:	5px;
+}
+.container_16 ul[data-role='listview'] {
+	margin:	0px;
+	margin-left:	5px;
+	margin-right:	5px;
+}
+</style>
 
-  <div id="container">
+<div data-role="page"  data-backbtn="false">
 
-    <div class="download">
-      <a href="http://github.com/jeromeetienne/jquery-mobile-960/zipball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
-      <a href="http://github.com/jeromeetienne/jquery-mobile-960/tarball/master">
-        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
-    </div>
+	<div data-role="header"  data-backbtn="false">
+		<h1>jquery mobile + 960 grid: demo</h1>
+	</div><!-- /header -->
 
-    <h1><a href="http://github.com/jeromeetienne/jquery-mobile-960">jquery-mobile-960</a>
-      <span class="small">by <a href="http://github.com/jeromeetienne">jeromeetienne</a></span></h1>
+	<div data-role="content">
+		<h1>960 grid on jquery mobile</h1>
+		
+		well known grid,
+		associate 2 distincts works, 960.gs and jquery mobile
+		
+		Current jquery mobile grid currently are crude at best, not suitable for large screen like tablets.
+		
+	
+		<h2>960 grid is cool</h2>
+		<ul data-role="listview"  data-inset="true" data-theme="c" data-dividertheme="b">
+			<li><a href="http://creativefan.com/tutorials-and-inspiration-to-unleash-the-960-grid-system/">Because many developers already know it</a></li>
+			<li><a href="http://www.blueprintcss.org/">Other alternatives like blueprint exist</a></li>
+			<li><a href="http://960.gs">See More.</a></li>
+		</ul>
+		<h2>jQuery mobile grid are crude</h2>
+		<ul data-role="listview"  data-inset="true" data-theme="c" data-dividertheme="b">
+			<li data-role="list-divider">Layout Not Flexible</li> 
+			<li>they only split the width in even parts. The user lack controls</li>
+			<li data-role="list-divider">Unsuitable for Tablets</li> 
+			<li>make its hard to use for tablette or any large screens devices</li>
+			<li data-role="list-divider">Unsual API</li> 
+			<li>Custom classes with usual names with a,b,c e.g. ui-block-a</li>
+			<li>not the classic grid-4 or span-4 like other frameworks</li>
+			<li data-role="list-divider">Details</li> 
+			<li><a href="http://jquerymobile.com/demos/1.0a3/#docs/content/content-grids.html">Official documentation.</a></li>
+		</ul>
 
-    <div class="description">
-      960 grid on jquery-mobile
-    </div>
 
-    <h2>Authors</h2>
-<p>Jerome Etienne (jerome.etienne@gmail.com)<br/><br/>      </p>
-<h2>Contact</h2>
-<p>Jerome Etienne (jerome.etienne@gmail.com)<br/>      </p>
+		<h1>Demo</h1>
+		<a href="demo.html" data-role="button">See Demo page</a>
+	</div><!-- /content -->
 
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div><!-- /footer -->
+</div><!-- /page -->
 
-    <h2>Download</h2>
-    <p>
-      You can download this project in either
-      <a href="http://github.com/jeromeetienne/jquery-mobile-960/zipball/master">zip</a> or
-      <a href="http://github.com/jeromeetienne/jquery-mobile-960/tarball/master">tar</a> formats.
-    </p>
-    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
-      by running:
-      <pre>$ git clone git://github.com/jeromeetienne/jquery-mobile-960</pre>
-    </p>
-
-    <div class="footer">
-      get the source code on GitHub : <a href="http://github.com/jeromeetienne/jquery-mobile-960">jeromeetienne/jquery-mobile-960</a>
-    </div>
-
-  </div>
-
-  
 </body>
 </html>
