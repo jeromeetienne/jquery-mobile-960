@@ -36,25 +36,39 @@ local skin
 */
 
 h1.pageTitle {
-	margin-top: 20px;
+	margin-top	: 20px;
+	font-size	: 3em;
 }
 pre {
-	font-size	: 0.85em;	
+	font-size	: 1em;	
 }
 pre span.bold {
 	color		: #254F7A;
 }
+
+p code {
+	font-size	: 130%;
+	font-weight	: bold;
+}
+h1 span.on {
+	color		: #DB5F54;;
+	font-size	: 0.9em;
+	display		: inline-block;
+	font-weight	: bolder;
+	-webkit-transform	: rotate(-20deg);
+	-moz-transform		: rotate(-20deg);
+}
 </style>
 <div data-role="page"  data-backbtn="false">
 	<div data-role="content">
-		<h1 class="pageTitle">960 grid on jQuery mobile</h1>
+		<h1 class="pageTitle">960 Grid <span class="on">on</span> jQuery-Mobile</h1>
 		<p>
-			jquery-mobile-960 is a <b>port of 960 grid to jquery mobile</b>.
+			jquery-mobile-960 is a <code>port of 960 grid to jquery mobile</code>.
 			
-			It has the flexibility of 960.gs, and is as easy to use as jquery mobile.
+			It merge the flexibility of 960.gs, and the ease of jquery mobile.
 	
-			It brings <b>more flexibility to jquery-mobile layout</b> and thus
-			make it <b>more suitable for tablets</b>.
+			It aims to bring <code>more flexibility to jquery-mobile layout</code> and thus
+			make it <code>easier to use on tablets</code>.
 		</p>
 		<h2>How to use it ?</h1>
 		To use 960 grids in jQuery Mobile, simply add one line:
@@ -62,61 +76,69 @@ pre span.bold {
     <span class="bold">&lt;link href="http://jeromeetienne.github.com/jquery-mobile-960/css/jquery-mobile-960.min.css" /&gt;</span>
     &lt;script src="http://code.jquery.com/jquery-1.5.min.js"&gt;&lt;/script&gt;
     &lt;script src="http://code.jquery.com/mobile/1.0a3/jquery.mobile-1.0a3.min.js">&lt;/script&gt;</pre>
-		And now you can use normal 960 grid syntax inside jQuery mobile
-		<pre>
-			here you put a example of 960 in a jquery mobile html
-		</pre>
+		And now you can use normal 960 grid syntax inside jQuery mobile pages
+		<pre>    &lt;fieldset class="container_12"&gt;
+	&lt;div class="grid_2"&gt;&lt;button type="submit"&gt;Button 1&lt;/button&gt;&lt;/div&gt;
+	&lt;div class="grid_8"&gt;&lt;button type="submit"&gt;Button 2&lt;/button&gt;&lt;/div&gt;	   
+	&lt;div class="grid_2"&gt;&lt;button type="submit"&gt;Button 3&lt;/button&gt;&lt;/div&gt;	   
+    &lt;/fieldset&gt;</pre>
+		And without more effort, jQuery Mobile gives you this result.
+		<fieldset class="container_12">
+			<div class="grid_2"><button type="submit">Button 1</button></div>
+			<div class="grid_8"><button type="submit">Button 2</button></div>	   
+			<div class="grid_2"><button type="submit">Button 3</button></div>	   
+		</fieldset>
+		For a complete documentation of 960 syntax, go see its homepage.
 		<a href="http://960.gs" data-role="button">960 homepage</a>
+
+		<h1>Demo</h1>
+		<p>
+			The usual demo pages.
+			<code>Seeing is more convincing than believing</code>
+		</p>
+		<div data-role="controlgroup">
+			<a href="http://jeromeetienne.github.com/jquery-mobile-960/demoFixed.html" data-role="button">Demo for fixed 960</a>
+			<a href="http://jeromeetienne.github.com/jquery-mobile-960/demoFluid.html" data-role="button">Demo for fluid 960</a>
+		</div>
+	
 		<h2>Motivation</h2>
 		<p>
 			I loved jQuery-mobile ability to make an application by just describing its structure in HTML5.
-			It makes applications real fast to develop. It seems to work real fine on mobile, but on larger
-			screens, not as good. jQuery-mobile layout is raw.
+			It makes applications real fast to develop.
 		</p>
 		<p>
-			jQuery mobile grid is currently rather crude ... uselessly
-			difficult to use on large screens, like tablets.
+			But jQuery mobile layout is currently rather raw.
 			They only split the width in even parts, providing little controls to the designer.
 			It uses an custom API with names ending with a, b, c or d, ui-block-a for example.
-			Not the classic grid-4 or span-3.
+			Not the classic grid-4 or span-3, so it feel awkward.
 		</p>
 		<p>
-			All in all, i wasnt satisfied.
-			jQuery-mobile-960 aims to fix those 2 issues by brinding <b>more flexibility</b> and
-			a <b>known API</b>.
-			It aims to make jquery mobile easier to use on larger screens.
+			All in all, i felt jquery mobile layout was uselessly difficult to use, especially
+			on large screens such as tablets. 960 grids are flexible and well known.
+			So i used ported 960 grids to see if it helps.
 		</p>
 		<a href="http://jquerymobile.com/demos/1.0a3/#docs/content/content-grids.html" data-role="button">jQuery Mobile Grid Docs</a>
-	
-		<h2>960 grid is cool</h2>
-		<ul data-role="listview"  data-inset="true" data-theme="c" data-dividertheme="b">
-			<li><a href="http://creativefan.com/tutorials-and-inspiration-to-unleash-the-960-grid-system/">Because many developers already know it</a></li>
-			<li><a href="http://www.blueprintcss.org/">Other alternatives like blueprint exist</a></li>
-			<li><a href="http://960.gs">See More.</a></li>
-		</ul>
-		<h2>jQuery mobile grid are crude</h2>
-		<ul data-role="listview"  data-inset="true" data-theme="c" data-dividertheme="b">
-			<li data-role="list-divider">Layout Not Flexible</li> 
-			<li>they only split the width in even parts. The user lack controls</li>
-			<li data-role="list-divider">Unsuitable for Tablets</li> 
-			<li>make its hard to use for tablette or any large screens devices</li>
-			<li data-role="list-divider">Unsual API</li> 
-			<li>Custom classes with usual names with a,b,c e.g. ui-block-a</li>
-			<li>not the classic grid-4 or span-4 like other frameworks</li>
-			<li data-role="list-divider">Details</li> 
-			<li><a href="http://jquerymobile.com/demos/1.0a3/#docs/content/content-grids.html">Official documentation.</a></li>
-		</ul>
 
-
-		<h1>Demo</h1>
-		See the demo pages. Seeing is more convincing than believing.
+		<h1>Download</h1>
+		<p>
+			<code>jquery-mobile-960</code> has 2 versions of 960 grids: one is <code>fixed width</code>
+			of 960px, the other is <code>fluid</code>. Each version supports 12 and 16 columns.
+		</p>
 		<div data-role="controlgroup">
-			<a href="http://jeromeetienne.github.com/jquery-mobile-960/demoFixed.html" target="_blank" data-role="button">Demo for fixed 960</a>
-			<a href="http://jeromeetienne.github.com/jquery-mobile-960/demoFluid.html" target="_blank" data-role="button">Demo for fluid 960</a>
+			<a href="http://jeromeetienne.github.com/jquery-mobile-960/css/jquery-mobile-960.css" data-role="button">jquery-mobile-960.css</a>
+			<a href="http://jeromeetienne.github.com/jquery-mobile-960/css/jquery-mobile-960.min.css" data-role="button">jquery-mobile-960..min.css</a>
+			<a href="http://jeromeetienne.github.com/jquery-mobile-960/css/jquery-mobile-fluid960.css" data-role="button">jquery-mobile-fluid960.css</a>
+			<a href="http://jeromeetienne.github.com/jquery-mobile-960/css/jquery-mobile-fluid960.min.css" data-role="button">jquery-mobile-fluid960..min.css</a>
 		</div>
+	
 		<h1>About</h1>
-		The code is available on github under MIT license.
-		<a href="https://github.com/jeromeetienne/jquery-mobile-960" target="_blank" data-role="button">jQuery-mobile-960 on github</a>
+		<p>
+			The code is available on github under MIT license. The author is Jerome Etienne.
+		</p>
+		<div data-role="controlgroup">
+			<a href="https://github.com/jeromeetienne/jquery-mobile-960" data-role="button">jQuery-mobile-960 on github</a>
+			<a href="http://jetienne.com" data-role="button">Jerome Etienne Homepage</a>
+		</div>
 	</div><!-- /content -->
 </div><!-- /page -->
 

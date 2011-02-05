@@ -14,8 +14,13 @@ This is a key advantage for me, a coder without design skill.
 
 i am even considering using it for normal webapps.
 
-### how
+### How
 
+* how to use it
+* how to include it
+* put the doc of 960
+* put the doc of jquery mobile grid
+* how to get it
 
 
 ### When
