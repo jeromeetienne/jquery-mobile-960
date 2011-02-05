@@ -1,15 +1,12 @@
 # mini Makefile to automatize tasks
 
 help:
-	@echo "$$ make server"
-	@echo "\tRun the developement server"
+	@echo "$$ make build"
+	@echo "\tBuild the css files"
 	@echo "$$ make deploy"
 	@echo "\tDeploy the application on google AppEngine"
 	@echo "$$ make help"
 	@echo "\tDisplay inline help"
-
-server:
-	$(GAE_ROOT)/dev_appserver.py .
 
 build:
 	node lib/build.js
