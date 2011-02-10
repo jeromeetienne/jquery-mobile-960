@@ -14,7 +14,7 @@
 .grid_12
 { margin: 0; padding: 0; border: 0; float: left; }
 
-div[data-role=page] {
+.ui-mobile [data-role='page'], .ui-mobile [data-role='dialog'], .ui-page {
 	left: 50%;
 	margin-left: -480px;
 	width: 960px;
@@ -154,7 +154,7 @@ div[data-role=page] {
 .grid_16
 { margin: 0; padding: 0; border: 0; float: left; }
 
-div[data-role=page] {
+.ui-mobile [data-role='page'], .ui-mobile [data-role='dialog'], .ui-page {
 	left: 50%;
 	margin-left: -480px;
 	width: 960px;
